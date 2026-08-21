@@ -1,19 +1,14 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-   <title>Conhecendo o Meio Ambiente</title>
-
+   <title>Conhecendo o valor das agua</title>
 
    <style>
-
-
        header {
            background-color: #4a17aa;
            color: rgb(11, 225, 233);
@@ -24,7 +19,6 @@
            padding: 16px;
        }
 
-
        main {
            background-color: #0683f7;
            color: #06f7d6;
@@ -33,7 +27,6 @@
            padding: 16px;
        }
 
-
        article {
            display: flex;
            margin-bottom: 20px;
@@ -41,17 +34,16 @@
            padding: 10px;
        }
 
-
        img {
-           width: 200px;
-           height: 200px;
+           width: 280px;
+           height: 280px;
+           border: 4px solid #0bf0a3;
+           border-radius: 8px;
        }
-
 
        .autor {
            font-weight: bold;
        }
-
 
        button {
            width: 80px;
@@ -59,257 +51,188 @@
            border: 1px solid #0bf0a3;
        }
 
+       /* LED suave no título + letras maiores */
+       header h1 {
+           font-size: 2.4rem;
+           text-shadow: 
+               0 0 4px #00ffff,
+               0 0 8px #00ffff;
+           animation: led 2s ease-in-out infinite alternate;
+       }
 
+       @keyframes led {
+           from {
+               text-shadow: 
+                   0 0 3px #00ffff,
+                   0 0 6px #00ffff;
+           }
+           to {
+               text-shadow: 
+                   0 0 6px #00ffff,
+                   0 0 12px #00ffff;
+           }
+       }
+
+       /* Chuva */
+       #chuva {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           pointer-events: none;
+           z-index: 9999;
+           overflow: hidden;
+       }
+
+       .gota {
+           position: absolute;
+           width: 2px;
+           height: 14px;
+           background: linear-gradient(transparent, #a0e8ff);
+           border-radius: 50%;
+           animation: cair linear infinite;
+           opacity: 0.75;
+       }
+
+       @keyframes cair {
+           0% {
+               transform: translateY(-30px);
+               opacity: 0;
+           }
+           15% {
+               opacity: 0.8;
+           }
+           100% {
+               transform: translateY(100vh);
+               opacity: 0;
+           }
+       }
    </style>
 </head>
 
-
 <body>
 
+   <!-- Chuva -->
+   <div id="chuva"></div>
 
    <header>
-
-
-       <h1>Conhecendo o Meio Ambiente</h1>
-
-
+       <h1>Conhecendo o valor da agua</h1>
        <p>Pequenas atitudes fazem a diferença!</p>
-
-
    </header>
 
-
    <main>
-
-
        <article>
-
-
            <img src="agua.jpg" alt="Natureza">
 
-
            <div>
-
-
-               <h2>Cuidar da natureza</h2>
-
-
-               <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>A natureza é importante para a nossa vida.</p>
-
-
+               <h2>Cuide da água é importante</h2>
+               <p class="autor">Por: João lucas</p>
+               <p>A água é essencial para a vida. Sem ela, não existe plantas, animais nem seres humanos. Por isso devemos cuidar e economizar cada gota.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
 
-
-
-
        <article>
-
-
            <img src="agua2.jpg" alt="Floresta">
 
-
            <div>
-
-
-               <h2>Preservar o meio ambiente</h2>
-
-
-               <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>Todos podemos ajudar a preservar o meio ambiente.</p>
-
-
+               <h2>Preservar a água</h2>
+               <p class="autor">Por: João lucas</p>
+               <p>Preservar a água significa proteger rios, lagos e florestas. Quando cuidamos da natureza, garantimos água limpa para todos no futuro.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
 
-
-
-
        <article>
-
-
-           <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Paisagem">
-
+           <img src="praia.jpg" alt="Paisagem">
 
            <div>
-
-
                <h2>Pequenas atitudes</h2>
-
-
-               <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>Pequenas atitudes podem ajudar o nosso planeta.</p>
-
-
+               <p class="autor">Por: João lucas</p>
+               <p>Fechar a torneira ao escovar os dentes, tomar banhos mais curtos e não jogar lixo na rua são atitudes simples que economizam muita água.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
 
-
-
-
        <article>
-
-
-           <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Paisagem natural">
-
+           <img src="reciclo.png" alt="Paisagem natural">
 
            <div>
-
-
                <h2>O planeta precisa de nós</h2>
-
-
-               <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>Cuidar do planeta é responsabilidade de todos.</p>
-
-
+               <p class="autor">Por: João lucas</p>
+               <p>A água cobre a maior parte do planeta, mas a água doce disponível é pouca. Cada um de nós tem a responsabilidade de proteger esse recurso tão precioso.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
 
-
-
-
        <article>
-
-
-           <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" alt="Natureza">
-
-
+           <img src="planet.jpg" alt="Natureza">
            <div>
-
-
                <h2>Um futuro melhor</h2>
-
-
                <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>As nossas escolhas podem ajudar a construir um futuro melhor.</p>
-
-
+               <p>Se cuidarmos da água hoje, as próximas gerações terão um futuro melhor, com rios limpos, natureza viva e saúde para todos.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
-
-
-
 
        <article>
-
-
-           <img src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Floresta">
-
-
+           <img src="copo.jpg" alt="Floresta">
            <div>
-
-
                <h2>Faça sua parte!</h2>
-
-
                <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>Comece hoje com pequenas atitudes.</p>
-
-
+               <p>A importância da água é enorme: ela hidrata, produz alimentos e mantém a vida. Comece agora a fazer a sua parte para proteger esse tesouro.</p>
                <button>❤️<span>0</span></button>
-
-
                <button>💧<span>0</span></button>
-
-
            </div>
-
-
        </article>
-
-
    </main>
 
-
    <script>
-
-
        const botoes = document.querySelectorAll("button");
 
+       botoes.forEach(function (botao) {
+           let curtiu = false;
 
-      botoes.forEach(function (botao) {
-let curtiu = false;
+           botao.addEventListener("click", botaoClicado);
 
+           function botaoClicado() {
+               console.log("fui clicado");
+               let texto = botao.querySelector("span");
 
-botao.addEventListener("click", botaoClicado);
+               if (curtiu === false) {
+                   texto.textContent++;
+                   curtiu = true;
+               } else {
+                   texto.textContent--;
+                   curtiu = false;
+               }
+           }
+       });
 
+       // Chuva mais rápida e com mais gotas
+       const chuva = document.getElementById("chuva");
 
-function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
+       function criarGota() {
+           const gota = document.createElement("div");
+           gota.classList.add("gota");
+           gota.style.left = Math.random() * 100 + "vw";
+           gota.style.animationDuration = (0.4 + Math.random() * 0.7) + "s";
+           gota.style.height = (10 + Math.random() * 18) + "px";
+           chuva.appendChild(gota);
 
+           setTimeout(() => {
+               gota.remove();
+           }, 1500);
+       }
 
-if (curtiu === false) {
-texto.textContent++;
-curtiu = true;
-} else {
-texto.textContent--;
-curtiu = false;
-}
-}
-});
-
-
+       setInterval(criarGota, 15);
    </script>
 
-
 </body>
-
-
 </html>
-       
-  
